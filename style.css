@@ -1,0 +1,27 @@
+:root {
+    --main: #16161a;
+    --text: #94a1b2;
+    --button: #7f5af0;
+    --headline: #fffffe;
+    --second: #72757e;
+    --third: #2cb67d;
+    --stroke: #010101;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    font-size: 15px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.cuadrado {
+    width: 40em; 
+    height: 25em;
+    border-radius: 5%;
+    background-image: url("imgs/card_model.jpg");
+    background-size: cover;
+}
