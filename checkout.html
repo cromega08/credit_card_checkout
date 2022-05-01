@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 
 <!--
+Credits from images: 
+
 https://unsplash.com/photos/g7NfqV6C074
 https://unsplash.com/photos/YREw6bUXAT8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+<a href="https://www.flaticon.com/free-icons/credit-card" title="credit card icons">Credit card icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/credit-card" title="credit card icons">Credit card icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/bank" title="bank icons">Bank icons created by Ctrlastudio - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/credit-card" title="credit card icons">Credit card icons created by Octopocto - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/visa" title="visa icons">Visa icons created by Roundicons - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/paypal" title="paypal icons">Paypal icons created by Roundicons - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/maestro" title="maestro icons">Maestro icons created by Roundicons - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/apple-pay" title="apple pay icons">Apple pay icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/american-express" title="american express icons">American express icons created by Roundicons - Flaticon</a>
 -->
 
 <html>
@@ -12,21 +23,40 @@ https://unsplash.com/photos/YREw6bUXAT8?utm_source=unsplash&utm_medium=referral&
         </title>
         <link rel = "stylesheet" href="style.css"/>
     </head>
-    <body>
-        <h1>
-            Credit Card
+    <header>
+        <img src="imgs/logo.png" style="width: 6em;"/>
+        <h1 id = "brand">
+            Checkout
         </h1>
-        <div class = "cuadrado">
-            <input type="text" placeholder="Name"/>
-            <input type="text" placeholder="Card Number"/>
-            <p>Expire Date</p><input type="date" placeholder="Expire date"/>
-            <input type="password" placeholder="CVC/CVV"/>
+    </header>
+    <body>
+        <div id = "credit_card" class = "square">
+            <div id="card">
+                <div id = "payment" class = "dropdown">
+                    <button class = "pay_opt"><img src = "imgs/visa.png" style="width: 6em;"/></button>
+                    <div class="dropdown_cont">
+                        <button class = "pay_opt"><img src = "imgs/maestro.png" style="width: 6em;"/></button>
+                        <button class = "pay_opt"><img src = "imgs/paypal.png" style="width: 6em;"/></button>
+                        <button class = "pay_opt"><img src = "imgs/american-express.png" style="width: 6em;"/></button>
+                        <button class = "pay_opt"><img src = "imgs/apple-pay.png" style="width: 6em;"/></button>
+                    </div>
+                </div>
+                <input id = "name" type="text" placeholder="Name"/>
+                <input id = "number" type="text" placeholder="Card Number"/>
+                <p id = "expire">Expire Date: <input id = "date" type="date"/></p>
+                <input id = "cvc" type="password" placeholder="CVC/CVV"/>
+            </div>
         </div>
-        <br>
-        <div class="cuadrado">
-            <p>Amount to pay: </p>
-            <input type="number" placeholder="Total Amount"/>
-            <button>Pay Now</button>
+        <div id = "pay_info" class = "square">
+            <img id = "product" src = "https://avatars.githubusercontent.com/u/90356347?s=400&u=6d6ac1571867c107505012e6fad4590dd474f5d0&v=4"/>
+            <div id = "attributes">
+                <input type = "text" placeholder = "Name"/>
+                <br/>
+                <input type = "text" placeholder = "Product type (ex.: Clothes, Technology, etc.)"/>
+                <br/>
+                <input type = "text" placeholder = "Product characteristics"/>
+            </div>
+            <p id = "buy">Amount to pay: <input id = "pay" type="number" placeholder="Total Amount"/> <button>Pay Now</button></p>
         </div>
     </body>
 </html>
