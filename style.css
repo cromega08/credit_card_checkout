@@ -17,13 +17,18 @@
 */
 
 header {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #c9cbcf;
     min-height: 10vh;
+    width: 18em;
+    border-radius: 1em;
     position: relative;
     bottom: 2.5em;
     right: 9em;
     vertical-align: middle;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-content: center;
 }
 
@@ -39,10 +44,20 @@ body {
 }
 
 input {
-    border-width: 0;
+    border-radius: 0.4em;
+    border: solid;
+    border-color: #2c394a;
     width: 20em;
     height: 2em;
     z-index: 0;
+    background-color: #cbcbd1;
+}
+
+input::placeholder {
+    color: #2c394a;
+    font-weight: 900;
+    position: relative;
+    left: 0.6em;
 }
 
 #brand {
@@ -58,19 +73,19 @@ input {
 
 #name {
     position:relative;
-    top: 23.5%;
+    top: 18%;
     left: 5.9%;
 }
 
 #number {
     position: relative;
-    top: 38%;
-    right: 39.8%;
+    top: 34.7%;
+    right: 41%;
 }
 
 #expire {
     position: relative;
-    top: 41.3%;
+    top: 37.5%;
     left: 58%;
 }
 
@@ -81,7 +96,7 @@ input {
 
 #cvc {
     position: relative;
-    top: 29.5%;
+    top: 24.7%;
     left: 5.95%;
 }
 
@@ -98,8 +113,12 @@ input {
 }
 
 #payment {
+    border: solid;
+    border-radius: 1em;
+    border-width: 0.3em;
+    border-color: #2c394a;
     position: relative;
-    top: 9.5%;
+    top: 8%;
     left: 6%;
     width: fit-content;
 }
@@ -109,8 +128,8 @@ input {
     position: relative;
     top: 1.7em;
     left: 2.2em;
-    background-color: white;
-    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
 }
 
 #buy {
@@ -132,7 +151,7 @@ input {
 .square {
     width: 40em; 
     height: 25em;
-    border-radius: 5%;
+    border-radius: 2.5em;
 }
 
 .pay_opt {
@@ -162,19 +181,22 @@ input {
 
 .pay_opt:hover,
 .pay_opt:focus {
-    animation: glow 500ms ease forwards;
+    animation: thight 500ms ease forwards, glow 100ms ease forwards;
 }
 
 input:hover,
 input:focus {
-    animation: glow 500ms ease forwards;
+    animation: thight 500ms ease forwards;
 }
 
 @keyframes glow {
-    from {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
     to {
-        box-shadow: 0 0 1em 1em white;
+        box-shadow: 0 0 1.5em 0 #4d5b6b;
+    }
+}
+
+@keyframes thight {
+    to {
+        box-shadow: 0 0 0 .3em #2c394a;
     }
 }
